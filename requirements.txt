@@ -1,0 +1,12 @@
+markdown
+pandas
+dotenv
+ollama
+faker
+torch
+jupyter
+openai
+matplotlib
+seaborn
+presidio_analyzer
+presidio_anonymizer

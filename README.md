@@ -29,7 +29,6 @@ This work is licensed under a
 [cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
 [cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
 
-
 ### Local Installation
 
 To install locally, please follow these steps:
@@ -47,8 +46,25 @@ $ conda install pip
 $ pip install -r requirements.txt
 ```
 
+#### Using uv
+
 If you are using uv, you can also use the pyproject.toml file to install the necessary requirements.
 
+#### Using pixi
+
+[pixi](https://pixi.prefix.dev/latest/) is a package management tool useful for installing Python
+and project dependencies. It has nice support for CPU and GPU environments.
+
+After cloning the repo:
+
+1. [Install pixi](https://pixi.prefix.dev/latest/installation/).
+2. Install and activate the pixi environment: `pixi install`
+3. Check the dependencies installed: `pixi list`
+4. Run a command: `pixi run jupyter lab`
+
+Helpful commands in [Getting Started](https://pixi.prefix.dev/latest/getting_started/):
+- `pixi -h` - help
+- `pixi self-update` - update pixi itself
 
 ### Installation tips for getting started with no previous Python environment
 
@@ -61,7 +77,6 @@ If you are using uv, you can also use the pyproject.toml file to install the nec
 7. Launch Jupyter Notebook by typing 'jupyter notebook' in that same prompt. More info on Step 6+7 here: https://dev.to/saintniyi/launch-anaconda-jupyter-notebook-environment-from-any-folder-in-any-drive-58mj
 
 If you run into any issues, please let me know!
-
 
 ### Corrections?
 

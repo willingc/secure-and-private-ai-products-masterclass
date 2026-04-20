@@ -2,3 +2,6 @@ __pycache__/
 in-progress/
 .DS_Store
 .ipynb_checkpoints/
+# pixi environments
+.pixi/*
+!.pixi/config.toml

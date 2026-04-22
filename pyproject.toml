@@ -31,5 +31,23 @@ dependencies = [
 channels = ["conda-forge"]
 platforms = ["linux-64", "osx-arm64", "win-64"]
 
+[tool.pixi.feature.gpu.system-requirements]
+cuda = "12.0"
+
 [tool.pixi.pypi-dependencies]
 masterclass = { path = ".", editable = true }
+
+[tool.pixi.feature.gpu.dependencies]
+pytorch-gpu = "*"
+cuda = "12.6.*"
+
+[tool.pixi.feature.cpu.dependencies]
+python-cpu = "*"
+
+[tool.pixi.environments]
+cpu = ["cpu"]
+default = ["gpu"]
+
+
+
+

@@ -2365,7 +2365,7 @@ packages:
 - pypi: ./
   name: masterclass
   version: 0.1.0
-  sha256: 4e2d645b0c68e54cf268ed5ef74489f16edcf71d9693a4c5501ee260a16749ff
+  sha256: 849bfc4802ae41922ce97280de93f71674f6ab292733e618e465563621f74720
   requires_dist:
   - dotenv>=0.9.9
   - faker>=38.2.0

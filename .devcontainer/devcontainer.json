@@ -4,10 +4,6 @@
   "service": "devcontainer",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
-  "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
-  },
-
   "forwardPorts": [
     8888,   // Jupyter
     11434   // Ollama API

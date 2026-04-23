@@ -1,0 +1,27 @@
+{
+  "name": "Jupyter + Ollama",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+  "forwardPorts": [
+    8888,   // Jupyter
+    11434   // Ollama API
+  ],
+
+  "portsAttributes": {
+    "8888": { "label": "Jupyter Lab", "onAutoForward": "openBrowser" },
+    "11434": { "label": "Ollama API", "onAutoForward": "silent" }
+  },
+
+  "postStartCommand": "bash .devcontainer/ollama-init.sh",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-toolsai.jupyter",
+        "ms-python.python"
+      ]
+    }
+  }
+}

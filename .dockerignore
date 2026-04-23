@@ -1,0 +1,9 @@
+.git
+.devcontainer
+iframe_figures/
+*.md
+.env
+__pycache__
+.ipynb_checkpoints
+.pixi/*
+!.pixi/config.toml

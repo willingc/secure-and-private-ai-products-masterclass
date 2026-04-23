@@ -9,6 +9,7 @@ services:
     command: sleep infinity
     environment:
       - OLLAMA_HOST=http://ollama:11434
+      - LLAMAFILE_HOST=http://llamafile:8080
     networks:
       - dev-network
 
@@ -33,6 +34,9 @@ services:
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile.llamafile
+    volumes:
+      - llamafile-data:/models
+
     ports:
       - "8080:8080"
     networks:

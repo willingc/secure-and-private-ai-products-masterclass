@@ -4,11 +4,10 @@ RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /models
 
-RUN curl -L "https://huggingface.co/mozilla-ai/llamafile_0.10.0/resolve/main/Qwen3.5-0.8B-Q8_0.llamafile" \
-    -o /models/qwen_35.llamafile && \
-    chmod +x /models/qwen_35.llamafile
+COPY llamafile-init.sh /usr/local/bin/llamafile-init.sh
+RUN chmod +x /usr/local/bin/llamafile-init.sh
 
 EXPOSE 8080
 
-CMD ["/models/qwen_35.llamafile", "--host", "0.0.0.0", "--port", "8080", "--nobrowser"]
+ENTRYPOINT ["/usr/local/bin/llamafile-init.sh"]
 

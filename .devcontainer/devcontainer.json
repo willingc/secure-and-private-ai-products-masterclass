@@ -2,7 +2,7 @@
   "name": "Jupyter + Ollama",
   "dockerComposeFile": "docker-compose.yml",
   "service": "devcontainer",
-  "workspaceFolder": "/app"
+  "workspaceFolder": "/app",
 
   "forwardPorts": [
     8888,   // Jupyter

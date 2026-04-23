@@ -12,7 +12,7 @@ fi
 
 echo "DEBUG: Attempting to execute..."
 # Use sh to execute and redirect errors to a file 
-sh /models/qwen_35.llamafile --host 0.0.0.0 --port 8080 --nobrowser > /models/server.log 2>&1 &
+sh /models/qwen_35.llamafile --host 0.0.0.0 --port 8080 --server > /models/server.log 2>&1 &
 
 echo "DEBUG: Server started in background. Sleeping to keep container alive."
 # This keeps the container (and DNS) alive for 1 hour even if the server fails

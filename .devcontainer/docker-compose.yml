@@ -5,7 +5,6 @@ services:
       dockerfile: .devcontainer/Dockerfile
     volumes:
       - ../:/app:cached
-      - llamafile-data:/models
       - /var/run/docker.sock:/var/run/docker.sock
     command: sleep infinity
     environment:

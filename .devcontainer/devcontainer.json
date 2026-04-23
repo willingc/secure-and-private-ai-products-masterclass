@@ -5,14 +5,14 @@
   "workspaceFolder": "/app",
 
   "forwardPorts": [
-    8888,   // Jupyter
-    11434   // Ollama API
-    8080   // Llamafile API
+    8888,
+    11434,
+    8080 
   ],
 
   "portsAttributes": {
     "8888": { "label": "Jupyter Lab", "onAutoForward": "openBrowser" },
-    "11434": { "label": "Ollama API", "onAutoForward": "silent" }
+    "11434": { "label": "Ollama API", "onAutoForward": "silent" },
     "8080": { "label": "Llamafile API", "onAutoForward": "silent" }
   },
 

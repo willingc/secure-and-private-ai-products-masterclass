@@ -20,7 +20,7 @@ services:
       - ollama-data:/root/.ollama
     networks:
       - dev-network
-    # Uncomment if you have a GPU:
+    # Uncomment if you have a GPU and are running docker compose locally:
     # deploy:
     #   resources:
     #     reservations:
@@ -29,8 +29,19 @@ services:
     #           count: all
     #           capabilities: [gpu]
 
+  llamafile:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile.llamafile
+    ports:
+      - "8080:8080"
+    networks:
+      - dev-network
+
+
 volumes:
   ollama-data:
+  llamafile-data:
 
 networks:
   dev-network:

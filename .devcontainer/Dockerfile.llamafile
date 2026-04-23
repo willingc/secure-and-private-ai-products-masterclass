@@ -1,0 +1,18 @@
+FROM ubuntu:22.04
+
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /models
+
+# Download llamafile binary
+RUN curl -L https://github.com/Mozilla-Ocho/llamafile/releases/latest/download/llamafile \
+    -o /usr/local/bin/llamafile && \
+    chmod +x /usr/local/bin/llamafile
+
+# Download model (pick one)
+RUN curl -L https://huggingface.co/Mozilla/Llama-3.2-1B-Instruct-llamafile/resolve/main/Llama-3.2-1B-Instruct.Q6_K.llamafile \
+    -o /models/model.gguf
+
+EXPOSE 8080
+
+CMD ["llamafile", "--model", "/models/model.gguf", "--host", "0.0.0.0", "--port", "8080"]

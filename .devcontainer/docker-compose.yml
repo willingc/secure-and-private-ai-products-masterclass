@@ -32,8 +32,8 @@ services:
 
   llamafile:
     build:
-      context: ..
-      dockerfile: .devcontainer/Dockerfile.llamafile
+      context: .
+      dockerfile: Dockerfile.llamafile
     volumes:
       - llamafile-data:/models
     ports:

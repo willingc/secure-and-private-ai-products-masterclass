@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 
 # Copy requirements first for better layer caching
-COPY ../requirements.txt .
+COPY requirements.txt .
 
 # Install CPU-only torch first to avoid pulling the large CUDA wheel,
 # then install the rest of the requirements

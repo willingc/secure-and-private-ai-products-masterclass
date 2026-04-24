@@ -50,6 +50,12 @@ $ pip install -r requirements.txt
 
 If you are using uv, you can also use the pyproject.toml file to install the necessary requirements.
 
+```
+$ uv venv
+$ source .venv/bin/activate
+$ uv sync
+$ uv run jupyter lab
+
 #### Using pixi
 
 [pixi](https://pixi.prefix.dev/latest/) is a package management tool useful for installing Python
